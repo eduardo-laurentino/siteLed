@@ -26,7 +26,7 @@
         };
         firebase.initializeApp(config);
 
-        let lampada = document.querySelector('#lampada');
+        let lampada = document.querySelector('lampada');
         lampada.addEventListener('click', () => {
             let estado = lampada.getAttribute('data-state');
             if (estado == 'off') {
