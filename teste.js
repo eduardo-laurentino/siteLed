@@ -7,6 +7,15 @@ board.on("ready", () => {
 
 
 function mudaImg(atributo){
+    var starCountRef = firebase.database().ref('lampada').on('value', function(snapshot){
+        let lampada = snapshot.val();
+        if(lampada == 'on'){
+            led.on();
+        }else{
+            led.off();
+        }
+      });
+
     if (atributo == 'img/lampadaoff.png'){
         document.getElementById("lampada").src = 'img/lampadaon.png';
         led.on();
