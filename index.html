@@ -26,17 +26,7 @@
 
     <img id="lampada" src="img/lampadaoff.png" data-state="" width="350px" height="500px "onclick="mudaImg(this.getAttribute('src'));">
 
-    <script>
-        function mudaImg(atributo){
-    if (atributo == 'img/lampadaoff.png'){
-        document.getElementById("lampada").src = 'img/lampadaon.png';
-        firebase.database().ref('lampada').set('on');
-    }else {
-        document.getElementById("lampada").src = 'img/lampadaoff.png';
-        firebase.database().ref('lampada').set('off');
-    }
-}
-    </script>
+    <script src="teste.js"></script>
 </body>
 
 </html>

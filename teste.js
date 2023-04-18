@@ -1,9 +1,9 @@
 function mudaImg(atributo){
     if (atributo == 'img/lampadaoff.png'){
         document.getElementById("lampada").src = 'img/lampadaon.png';
-        firebase.database().ref('lampada').set('off');
+        firebase.database().ref('lampada').set('on');
     }else {
         document.getElementById("lampada").src = 'img/lampadaoff.png';
-        firebase.database().ref('lampada').set('on');
+        firebase.database().ref('lampada').set('off');
     }
 }
