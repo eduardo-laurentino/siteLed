@@ -1,19 +1,22 @@
-var firebase = require("firebase");
+var five = require("johnny-five");
 
-var config = {
-  apiKey: "syegr4w2LKqRVWOmIi8V1m6XFyNIgJYxSHL85DpX",
-  authDomain: "lampada-f83c6-default-rtdb.firebaseapp.com",
-  databaseURL: "https://lampada-f83c6-default-rtdb.firebaseio.com/",
-  storageBucket: "lampada-f83c6-default-rtdb.appspot.com",
-};
-firebase.initializeApp(config);
+const board = new five.Board();
+
+
+function ligaled(){
+    board.on("ready", () => {
+        const led = new five.Led(13);
+        led.on();
+      });
+}
+
 
 function mudaImg(atributo){
     if (atributo == 'img/lampadaoff.png'){
         document.getElementById("lampada").src = 'img/lampadaon.png';
-        firebase.database().ref('lampada').set('on');
+        ligaled();
     }else {
         document.getElementById("lampada").src = 'img/lampadaoff.png';
-        firebase.database().ref('lampada').set('off');
     }
 }
+ligaled();
