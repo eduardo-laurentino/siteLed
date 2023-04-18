@@ -14,9 +14,7 @@ function ligaled(){
 function mudaImg(atributo){
     if (atributo == 'img/lampadaoff.png'){
         document.getElementById("lampada").src = 'img/lampadaon.png';
-        ligaled();
     }else {
         document.getElementById("lampada").src = 'img/lampadaoff.png';
     }
 }
-ligaled();
