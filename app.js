@@ -9,9 +9,9 @@ board.on("ready", function(){
     this.repl.inject({led: led});
 
     var config = {
-        apiKey: "syegr4w2LKqRVWOmIi8V1m6XFyNIgJYxSHL85DpX",
+        apiKey: "",
         authDomain: "lampada-f83c6-default-rtdb.firebaseapp.com",
-        databaseURL: "https://lampada-f83c6-default-rtdb.firebaseio.com/",
+        databaseURL: "",
         storageBucket: "lampada-f83c6-default-rtdb.appspot.com",
       };
       firebase.initializeApp(config);
