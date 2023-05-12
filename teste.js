@@ -7,3 +7,16 @@ function mudaImg(atributo){
         firebase.database().ref('lampada').set('off');
     }
 }
+var flag = true;
+function teste(){
+    if (flag == true){
+        firebase.database().ref('lampada').on('value', snapshot => {let dados = snapshot.val();
+            if (dados == 'on'){
+                document.getElementById("lampada").src = 'img/lampadaon.png';
+            }else {
+                document.getElementById("lampada").src = 'img/lampadaoff.png';
+            }
+        });
+        flag = false;
+    }
+}
